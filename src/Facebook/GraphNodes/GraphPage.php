@@ -37,6 +37,8 @@ class GraphPage extends GraphNode
         'best_page' => '\Facebook\GraphNodes\GraphPage',
         'global_brand_parent_page' => '\Facebook\GraphNodes\GraphPage',
         'location' => '\Facebook\GraphNodes\GraphLocation',
+        'cover' => '\Facebook\GraphNodes\GraphCoverPhoto',
+        'picture' => '\Facebook\GraphNodes\GraphPicture',
     ];
 
     /**
@@ -77,6 +79,26 @@ class GraphPage extends GraphNode
     public function getBestPage()
     {
         return $this->getField('best_page');
+    }
+
+    /**
+     * Returns Page Coverphoto.
+     *
+     * @return GraphCoverPhoto|null
+     */
+    public function getCover()
+    {
+        return $this->getField('cover');
+    }
+
+    /**
+     * Returns Page P cture.
+     *
+     * @return GraphPicture|null
+     */
+    public function getPicture()
+    {
+        return $this->getField('picture');
     }
 
     /**
